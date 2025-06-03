@@ -26,10 +26,11 @@ Welcome to our Telegram Bot.
 # --- Main function to run the bot ---
 def main():
     # 👇 Paste your bot token here
-    bot_token = "7641251013:AAGFCBySTijj-JRMPZAlu3Op7_6vv_MoDIs"
+    import os
 
-    app = ApplicationBuilder().token(bot_token).build()
+bot_token = os.getenv("BOT_TOKEN")  # Secure way to load token
 
+app = ApplicationBuilder().token(bot_token).build()
     # Add handlers
     app.add_handler(CommandHandler("start", start))
 
