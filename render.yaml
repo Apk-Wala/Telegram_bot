@@ -1,9 +1,0 @@
-services:
-  - type: worker
-    name: telegram-bot
-    env: python
-    buildCommand: ""
-    startCommand: python main.py
-    repo: https://github.com/ApkWala/telegram-bot  # 👈 Make sure this link has NO SPACES
-    branch: main
-    autoDeploy: true
