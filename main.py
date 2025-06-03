@@ -27,9 +27,7 @@ Welcome to our Telegram Bot.
 def main():
     # 👇 Paste your bot token here
     import os
-
-bot_token = os.getenv("BOT_TOKEN")  # Secure way to load token
-
+BOT_TOKEN = os.environ.get("BOT_TOKEN")  # Secure way to load token
 app = ApplicationBuilder().token(bot_token).build()
     # Add handlers
     app.add_handler(CommandHandler("start", start))
