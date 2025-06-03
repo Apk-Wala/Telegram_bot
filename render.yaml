@@ -1,9 +1,9 @@
 services:
-  - type: web
+  - type: worker  # 👈 Use 'worker' for bots, not 'web'
     name: telegram-bot
     env: python
     buildCommand: ""
     startCommand: python main.py
-    repo: https://github.com/Apk Wala/telegram-bot
+    repo: https://github.com/Apk-Wala/Telegram_bot  # 👈 No space in repo name
     branch: main
     autoDeploy: true
